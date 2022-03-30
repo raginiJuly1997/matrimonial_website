@@ -1,0 +1,48 @@
+<h1 class="text-center">Basic Details </h1>
+
+<%#= render partial: "search_bar/form" %>
+      <div class="container">
+      <table class="table table-light text-center">
+   <thead>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Gender</th>
+        <th> City</th>
+        <th> </th>
+    </thead>
+ <% if current_user.role == "male" %> 
+	<% @female.each do |profile| %>
+      <tr>
+         <%#= image_tag profile.image, :size =>"100", class: "rounded-circle " %>
+
+          <td><%= profile.first_name %></td>
+          <td><%= profile.last_name %></td>
+          <td><%= profile.gender %></td>
+          <td><%= profile.city %></td>
+          <td><%= link_to "More details", profile,class:"btn btn-outline-success"%><br></td>
+      </tr> 
+  <% end %>
+  <% else %>
+  <% @male.each do |profile| %>
+      <tr>
+         <%#= image_tag profile.image, :size =>"100", class: "rounded-circle " %>
+
+          <td><%= profile.first_name %></td>
+          <td><%= profile.last_name %></td>
+          <td><%= profile.gender %></td>
+          <td><%= profile.city %></td>
+          <td><%= link_to "More details", profile,class:"btn btn-outline-success"%><br></td>
+      </tr> 
+  <% end %>
+
+  <% end %>
+
+</table>
+</div>
+
+<div class="text-center">
+<%= link_to 'New Profile Create', new_profile_path, class: "btn btn-danger"%> 
+</div>
+    
+
+

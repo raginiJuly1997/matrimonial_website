@@ -1,0 +1,187 @@
+<h3>Profile</h3>
+	<table>	
+     <%= form_with(model: profile) do |form| %>
+  <tr>
+
+	<td>
+		<div>
+			<%= form.label :First_name %><br>
+			<%= form.text_field :first_name %>
+		</div>
+	</td>
+
+	<td>
+		<div>
+			<%= form.label :Last_name %><br>
+			<%= form.text_field :last_name %>
+		</div>
+	</td>
+  </tr>
+<tr>
+
+	<td>
+		<div>
+      		<%= form.label :Gender %><br/>
+      		<%= form.select :gender, ["select one","male","female"] %>
+  		</div>
+
+	</td>
+
+	<td>
+		<div>
+			<%= form.label :Date_of_birth %><br>
+			<%= form.date_field :date_of_birth %>
+		</div>
+	</td>
+</tr>
+<tr>
+
+	<td>
+		<div>
+      <%= form.label :Marital_status %><br/>
+      <%= form.select :marital_status, ["select one","single","Married","widow"] %>
+  </div>
+
+	</td>
+
+	<td>
+		<div>
+			<%= form.label :Father_name %><br>
+			<%= form.text_field :father_name %>
+		</div>
+	</td>
+</tr>
+<tr>
+
+	<td>
+		<div>
+			<%= form.label :Mother_name %><br>
+			<%= form.text_field :mother_name %>
+		</div>
+	</td>
+
+	<td>
+		<div>
+			<%= form.label :Mobile_number %><br>
+			<%= form.text_field :mobile_number %>
+		</div>
+	</td>
+</tr>
+<tr>
+
+	<td>
+		<div>
+      		<%= form.label :Religion %><br/>
+      		<%= form.select :religion, ["select one","Hindu","Muslim","Sikh", "Christian"] %>
+  		</div>
+	</td>
+
+	<td>
+		<div>
+			<%= form.label :Nationality %><br>
+			<%= form.text_field :nationality %>
+		</div>
+	</td>
+</tr>
+<tr>
+
+	<td>
+		<%= form.label :State %><br>
+		<%= form.text_field :state %>
+		
+	</td>
+
+	<td>
+		<div>
+			<%= form.label :city %><br>
+			<%= form.text_field :city %>
+		</div>
+	</td>
+</tr>
+<tr>
+
+	<td>
+		<div>
+			<%= form.label :Address %><br>
+			<%= form.text_field :address %>
+		</div>
+	</td>
+
+	<td>
+		<div>
+			<%= form.label :Pincode %><br>
+			<%= form.text_field :pincode %>
+		</div>
+	</td>
+</tr>
+<tr>
+
+	<td>
+		<div>
+			<%= form.label :Height %><br>
+			<%= form.text_field :height %>
+		</div>
+	</td>
+</tr>
+<tr>
+
+	<td>
+		<div>
+      		<%= form.label :Diet %><br/>
+      		<%= form.select :diet, ["select one","veg","non-veg"] %>
+  		</div>
+	</td>
+
+	<td>
+		<div>
+			<%= form.label :Hobbies %><br>
+			<%= form.text_area :hobbies %>
+		</div>
+	</td>
+</tr>
+<tr>
+
+	<td>
+		<div>
+			<%= form.label :College_name %><br>
+			<%= form.text_field :college_name %>
+		</div>
+	</td>
+
+	<td>
+		<div>
+			<%= form.label :Job %><br>
+			<%= form.text_field :job %>
+		</div>
+	</td>
+</tr>
+<tr>
+
+	<td>
+		<div>
+			<%= form.label :Income %><br>
+			<%= form.text_field :income %>
+		</div>
+	</td>
+
+	<td>
+		<div>
+			<%= form.label :About_yourself %><br>
+			<%= form.text_area :about_yourself %>
+		</div>
+	</td>
+</tr>
+<td>
+		<div>
+			<%= form.label :Profile_photo %><br>
+			<%= form.file_field :image %>
+		</div>
+	</td>
+</table>
+
+<div>
+	<%= form.submit %>
+</div>
+<% end %>
+
+
